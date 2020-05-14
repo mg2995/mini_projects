@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {
+        url "https://mvnrepository.com/artifact/"
+    }
+
+
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
+    compile 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+    compile group: 'commons-httpclient', name: 'commons-httpclient', version: '3.1'
+    // https://mvnrepository.com/artifact/cascading/cascading-hadoop
+    compile group: 'cascading', name: 'cascading-hadoop', version: '2.6.0'
+    compile group: 'cascading', name: 'cascading-hadoop', version: '2.6.0'
+    compile group: 'org.apache.hadoop', name: 'hadoop-client', version: '2.10.0'
+
+    //compile group: 'cascading', name: 'cascading-core', version: '3.2.0'
+    testCompile group: 'cascading', name: 'cascading-core', version: '2.6.0'
+
+    compile 'org.slf4j:slf4j-api:1.7.24'
+    compile 'org.slf4j:slf4j-simple:1.7.24'
+}
